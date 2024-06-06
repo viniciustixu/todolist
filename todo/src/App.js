@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import CriarTarefa from './components/CriarTarefa';
+import GerarTarefa from './components/GerarTarefa';
 
 function App() {
   return (
     <>
-      <p>Olá mundo</p>
+      <CriarTarefa />
+      <GerarTarefa />
     </>
   );
 }
