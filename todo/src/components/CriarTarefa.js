@@ -13,6 +13,7 @@ export default function CriarTarefa() {
   };
 
 
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -26,7 +27,6 @@ export default function CriarTarefa() {
         <input type="text" id="iDeadLine" name="deadline" />
 
         <input type="submit" value="Aplicar" />
-        {<button>Cancelar</button> /*Botão deve cancelar e voltar a pagina 1 */}
       </form>
     </>
   );

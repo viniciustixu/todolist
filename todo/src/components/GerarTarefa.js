@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import DeletaTarefa from './DeletaTarefa';
 
 export default function GerarTarefa() {
 
   const [items, setItems] = useState([]);
+
 
   useEffect(() => {
     const pegarItems = () => {
@@ -28,7 +30,8 @@ export default function GerarTarefa() {
           <p>Nome: {item.nome}</p>
           <p>Comentário: {item.comentario}</p>
           <p>DeadLine: {item.deadline}</p>
-        </div >
+          <DeletaTarefa itemKey={item.nome} />
+        </div>
       ))
       }
     </>
