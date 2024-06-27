@@ -6,20 +6,18 @@ export default function GerarTarefa() {
   const [items, setItems] = useState([]);
 
 
-  useEffect(() => {
-    const pegarItems = () => {
-      const itemsFromLocalStorage = [];
+  useEffect(
+    () => {
+      const todosOsItensLS = [];
 
       for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        const item = JSON.parse(localStorage.getItem(key));
-        itemsFromLocalStorage.push(item);
+        const chave = localStorage.key(i);
+        const item = JSON.parse(localStorage.getItem(chave));
+        todosOsItensLS.push(item);
       }
-      setItems(itemsFromLocalStorage);
-    };
-
-    pegarItems();
-  }, []);
+      setItems(todosOsItensLS);
+    }, []
+  );
 
 
 
